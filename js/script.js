@@ -111,20 +111,10 @@ $(document).ready(function(){
     }
 
 
-    var num;
-
     // Add Pokémon to Table
     addPokemonSpecies = function(){
 
-      var $curNumberPokemon = function() {
-        $(document).on('change', $('#pokemonNumber'), function(){
-          num = parseInt($('#pokemonNumber', this).val());
-        })
-      };
-
-
-
-      $curNumberPokemon();
+      var num = parseInt($('#pokemonNumber', this).val());
       var $tableInner = $('#finalDestination').find('tbody');
       $tableInner.append('<tr>').append('<td>' + num + '</td><td class="pokemon-avatar ' + ui.item.resourceName + '"></td>');
       resetForm();
